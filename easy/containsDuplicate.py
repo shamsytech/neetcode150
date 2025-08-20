@@ -1,17 +1,16 @@
 class Solution:
     def hasDuplicate(self, nums: List[int]) -> bool:
         '''
-        hSet
-        1, 2, 3, 3
-        {1, 2, 3}    
+        [1, 2, 3, 3]
+        seen:
+        {} -> {1} --> {1,2} --> {1,2,3} --> 3 is in seen, returns True   
         '''
-        hSet = set()
+        seen = set()
 
         for num in nums:
-            if num not in hSet:
-                hSet.add(num)
-            else:
+            if num in seen:
                 return True
+            seen.add(num)
         return False
 
 
