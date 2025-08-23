@@ -8,11 +8,3 @@ class Solution:
             return freqMap
             
         return checkString(s) == checkString(t)
-
-            
-            
-
-
-
-    
-        
